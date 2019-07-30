@@ -9,7 +9,7 @@ String[] OLD_FOLDERS = ['Backend Guild/BBB/Freestyle/',  'Cardiff/Build/BPAY/', 
 
 jenkins = Jenkins.instance
 
-for(i=0; i <= FOLDER_NAMES.length; i++) {
+for(i=0; i < FOLDER_NAMES.length; i++) {
   def arrFolder = FOLDER_NAMES[i].tokenize('/')
   def mainFolder = jenkins.getItem(arrFolder[0])
   
@@ -21,12 +21,8 @@ for(i=0; i <= FOLDER_NAMES.length; i++) {
   def subFolder = mainFolder.getItem(arrFolder[1])
   if (subFolder == null) {
     println "Creating " + FOLDER_NAMES[i]
+    
     subFolder = mainFolder.createProject(Folder.class, arrFolder[1])
-  }
-  def folder = jenkins.getItemByFullName(FOLDER_NAMES[i])
-  if (folder == null) {
-    println "ERROR: Folder '$FOLDER_NAMES[i]' not found"
-    return
   }
 
   // Find jobs in main folder
@@ -39,8 +35,8 @@ for(i=0; i <= FOLDER_NAMES.length; i++) {
 
   // Move them
   found.each { job ->
-    println "Moving '$job.name' to '$folder.name'"
-    Items.move(job, subFolder)
-    proj.delete()
+    println "Moving '$job.name' to " + FOLDER_NAMES[i]
+   // Items.move(job, subFolder)
+   // proj.delete()
   }
 }
