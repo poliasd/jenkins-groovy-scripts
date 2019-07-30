@@ -35,7 +35,7 @@ for(i=0; i <= FOLDER_NAMES.length; i++) {
   def jobType = tribe.getItem(oldFoldersArr[1])
   def proj = jobType.getItem(oldFoldersArr[2])
 
-  def found = proj.getAllItems
+  def found = proj.getAllItems()
 
   // Move them
   found.each { job ->
