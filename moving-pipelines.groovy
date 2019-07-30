@@ -22,7 +22,6 @@ for(i=0; i <= FOLDER_NAMES.length; i++) {
   def subFolder = mainFolder.getItem(arrFolder[1])
   if (subFolder == null) {
     println "Creating " + FOLDER_NAMES[i]
-    
     subFolder = mainFolder.createProject(Folder.class, arrFolder[1])
   }
   def folder = jenkins.getItemByFullName(FOLDER_NAMES[i])
