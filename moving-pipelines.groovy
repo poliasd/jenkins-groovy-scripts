@@ -5,7 +5,6 @@ import hudson.*
 import hudson.model.*
 
 String[] FOLDER_NAMES = ['Backend Guild/BBB/', 'Cardiff/BPAY/', 'CTRL/MB/', 'CX/CXP-MAN/', 'CX/CXP-PORTAL/', 'CX/CXP-DM/', 'CX/CXP-PS/', 'F5/APPR/', 'Flow/flow/', 'Flow/FORMS/', 'Flow/FLOW/', 'Frontend Guild/BSFG/', 'QA Guild/CT/', 'Shared/WA3REF/', 'Tribe X/BDLC/', 'Tribe X/CXP-AUTO/', 'Tribe X/ENL/', 'Tribe X/HELM/', 'Tribe X/PLAT/', 'Tribe X/REF/', 'Tribe X/START/', 'Tribe X/ENL/', 'Tribe X/SDLC/', 'Tribe X/SDLCW/', 'Tribe X/TOOLS/', 'Tribe X/CXP-AUTO/', 'Tribe X/SDLC/', 'UA/ACT/', 'UA/AS/', 'UA/NOT/', 'UA/ACT/', 'UA/AS/', 'UA/NOT/']
-
 String[] OLD_FOLDERS = ['Backend Guild/BBB/Freestyle/',  'Cardiff/Build/BPAY/', 'CTRL/Deploy/MB/', 'CX/Build/CXP-MAN/', 'CX/Build/CXP-PORTAL/', 'CX/Deploy/CXP-DM/', 'CX/Deploy/CXP-PS/', 'F5/Build/APPR/', 'Flow/Build/flow/', 'Flow/Build/FORMS/', 'Flow/Deploy/FLOW/', 'Frontend Guild/Build/BSFG/', 'QA Guild/Build/CT/', 'Shared/Build/WA3REF/', 'Tribe X/Build/BDLC/', 'Tribe X/Build/CXP-AUTO/', 'Tribe X/Build/ENL/', 'Tribe X/Build/HELM/', 'Tribe X/Build/PLAT/', 'Tribe X/Build/REF/', 'Tribe X/Build/START/', 'Tribe X/Deploy/ENL/', 'Tribe X/Deploy/SDLC/', 'Tribe X/Deploy/SDLCW/', 'Tribe X/Deploy/TOOLS/', 'Tribe X/Freestyle/CXP-AUTO/', 'Tribe X/Freestyle/SDLC/', 'UA/Build/ACT/', 'UA/Build/AS/', 'UA/Build/NOT/', 'UA/Deploy/ACT/', 'UA/Deploy/AS/', 'UA/Deploy/NOT/']
 
 jenkins = Jenkins.instance
